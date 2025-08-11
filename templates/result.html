@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Diarization Result</title>
+</head>
+<body>
+  <h1>Diarization Completed</h1>
+  <ul>
+    <li><a href="{{ url_for('download_file', filename=json_file) }}">Download Transcript JSON</a></li>
+    <li><a href="{{ url_for('download_file', filename=srt_file) }}">Download Subtitle SRT</a></li>
+    <li><a href="{{ url_for('download_file', filename=summary_file) }}">Download Summary TXT</a></li>
+  </ul>
+  <a href="{{ url_for('index') }}">Back to upload</a>
+</body>
+</html>

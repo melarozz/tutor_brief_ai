@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Diarizer Web UI</title>
+</head>
+<body>
+  <h1>Upload Video for Diarization</h1>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul style="color:red;">
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+  <form method="post" enctype="multipart/form-data">
+    <label>Video file:</label><br>
+    <input type="file" name="video_file" required><br><br>
+    <button type="submit">Run Diarization</button>
+  </form>
+</body>
+</html>
